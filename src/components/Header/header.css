@@ -3,6 +3,7 @@
   padding: 0 20px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 65px;
   /* border-top:.1px solid rgb(223, 230, 233) ; */
@@ -11,7 +12,7 @@
 
 .logo-section {
   border-right: 1px solid rgb(223, 230, 233);
-  width: 18%;
+  width: 300px !important;
   padding: 10px;
   display: flex;
   height: 70px;
@@ -19,12 +20,12 @@
 }
 
 .logo-section img {
-  width: 60%;
+  width: 150px;
 }
 
 .search-section {
   padding: 10px 40px;
-  width: 48%;
+  width: 550px;
   align-items: center;
 }
 .input_box {
@@ -32,7 +33,7 @@
   align-items: center;
   background-color: rgb(245, 246, 250);
   padding: 3px 18px;
-  width: 50%;
+  width: 80%;
   border-radius: 25px;
 }
 .search_icon {
@@ -54,7 +55,7 @@
 .menu-section{
   display: flex;
   align-items: center;
-  width: 34%;
+  width: 500px;
 }
 .menu_icon{
   /* background-color:rgb(245, 246, 250) ; */
@@ -69,8 +70,11 @@
   color: #354453;
 }
 .profile_css{
-  display: flex;align-items: center;justify-content: center;
+  display: flex;
+  align-items:
+   center;justify-content: center;
   margin-left: 15px;
+  width: 180px;
 }
 .profile_css img{
   width: 50px;
@@ -78,22 +82,67 @@
 
 }
 .name{
-  margin-left: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  word-wrap: none;
+  align-items: start;
 }
 
-.name p{
-  font-weight: 400;
-  font-size: 17px;
+.header_css p{
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-family: 'Titillium Web', sans-serif;
   color: #354453;
-  display: flex;align-items: center;
+  text-transform: capitalize;
 }
-
-.profile-icon-css{
-  margin-left: 10px;
-}
-
 .name small{
-  letter-spacing: 1px;
-  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize; 
   color: #354453;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+p{
+  font-family: 'Titillium Web', sans-serif;
+  color: #354453;
+  text-transform: capitalize;
+}
+
+.logo_responsive{
+  display: none;
+}
+.logo_responsive img{
+width: 150px;
+}
+.dropdown{
+  display: none;
+}
+.menu_responsive{
+  color:#FF9F43;
+  display: none;
+}
+/* media queries */
+
+@media screen and (max-width: 1130px) {
+  .search-section {
+    display: none;
+  }
+  .logo-section{
+    display: none;
+  }
+  .menu-section{
+    display: none;
+  }
+  .logo_responsive{
+    display: block;
+  }
+  .dropdown{
+    display: block;
+  }
+  .menu_responsive{
+    display: block;
+  }
 }
