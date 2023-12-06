@@ -48,19 +48,18 @@ const Header = () => {
           <img src={logo} alt="logo" />
         </div>
         {/* responsive */}
-        <div className="menu_responsive"><FormatAlignLeftIcon fontSize="large"/></div>
+        <div className="menu_responsive"><FormatAlignLeftIcon  fontSize="large" className="resp_icon"/></div>
         <div className="logo_responsive"> <img src={logo} alt="logo" /></div>
 
         <div className="dropdown">
-      <Button
+      <MoreVertIcon
+      style={{color:'#FF9F43'}} className="resp_icon" fontSize="large"
         id="basic-button"
         aria-controls={opendrop ? 'basic-drop' : undefined}
         aria-haspopup="true"
         aria-expanded={opendrop ? 'true' : undefined}
-        onClick={handledrop}
-      >
-        <MoreVertIcon style={{color:'#FF9F43'}} fontSize="large"/>
-      </Button>
+        onClick={handledrop} 
+      />
       <Menu style={{marginTop:'20px'}}
         id="basic-drop"
         anchorEl={drop}
@@ -85,23 +84,23 @@ const Header = () => {
 
         <div className="menu-section">
           <div className="menu_icon">
-            <LanguageIcon />
+            <LanguageIcon  fontSize="small" />
           </div>
           <div className="menu_icon">
-            <CropFreeIcon />
+            <CropFreeIcon  fontSize="small" />
           </div>
           <div className="menu_icon">
             <Badge badgeContent={4} color="warning" >
-              <MailIcon  style={{color:'#354453' }} />
+              <MailIcon  fontSize="small" className="badge"  style={{color:'#354453' }} />
             </Badge>
           </div>
           <div className="menu_icon">
             <Badge badgeContent={4} color="warning">
-              <NotificationsIcon  style={{color:'#354453'}} color="action" />
+              <NotificationsIcon  fontSize="small" className="badge" style={{color:'#354453'}} color="action" />
             </Badge>
           </div>
           <div className="menu_icon">
-            <SettingsIcon />
+            <SettingsIcon  fontSize="small"/>
           </div>
           {/* profile section */}
 
