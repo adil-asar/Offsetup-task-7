@@ -4,6 +4,7 @@ import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import Divider from '@mui/material/Divider';
 import LanguageIcon from "@mui/icons-material/Language";
 import Badge from "@mui/material/Badge";
+import BadgeMenu from "./BadgeMenu";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -16,7 +17,7 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+
 import "./header.css";
 import logo from "../../assets/logo.png";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
@@ -91,14 +92,12 @@ const Header = () => {
           </div>
           <div className="menu_icon">
             <Badge badgeContent={4} color="warning" >
-              <MailIcon  fontSize="small" className="badge"  style={{color:'#354453' }} />
+              <MailIcon  fontSize="small" className="badge"   />
             </Badge>
           </div>
-          <div className="menu_icon">
-            <Badge badgeContent={4} color="warning">
-              <NotificationsIcon  fontSize="small" className="badge" style={{color:'#354453'}} color="action" />
-            </Badge>
-          </div>
+        
+            <BadgeMenu/>
+       
           <div className="menu_icon">
             <SettingsIcon  fontSize="small"/>
           </div>
@@ -122,6 +121,7 @@ const Header = () => {
             </div>
           </Button>
           <Menu
+          style={{marginTop:'20px'}}
             id="fade-menu"
             MenuListProps={{
               "aria-labelledby": "fade-button",
