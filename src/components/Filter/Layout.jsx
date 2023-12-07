@@ -4,7 +4,7 @@ import Addcart from './Addcart'
 import Grid from '@mui/material/Grid';
 const Layout = () => {
   return (
-    <Grid container spacing={2} sx={{marginTop:"50px",bgcolor:'rgb(245, 246, 250)'}}>
+    <Grid container spacing={2} sx={{marginTop:"65px",bgcolor:'rgb(245, 246, 250)'}}>
             <Grid item lg={8} xs={12}>
          <FruitFilter/>
         </Grid>

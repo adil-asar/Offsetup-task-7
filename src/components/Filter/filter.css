@@ -100,3 +100,33 @@ text-align: center;
     background-color: rgb(87, 75, 144);
     color: #fff;
   }
+
+
+  /* responsiveness  */
+  @media screen and (max-width: 1280px){
+    .product_card{   width: 30%;  }
+    .tabs_items{ justify-content: space-between; }
+    .tab_card{     width: 150px; height: 150px;}
+      .img-css {     width: 100px;  height: 100px;}
+  }
+  @media screen and (max-width: 1000px) {
+    .product_card{   width: 47.5%;  }
+    .product_card img{   height: 250px; }
+    .tabs_items{ justify-content: center; }
+    .tab_card{     width: 150px; height: 150px;}
+      .img-css {     width: 100px;  height: 100px;}
+}
+
+@media screen and (max-width: 550px) {
+    .product_card{   width: 80%;  }
+    .product_card img{   height: 260px; }
+    .tab_card{     width: 5; height: 180px;}
+      .img-css {     width: 140px;  height: 140px;}    
+}
+
+@media screen and (max-width: 350px) {
+    .product_card{   width: 95%;  }
+    .product_card img{   height: 230px; }
+    .tab_card{     width: 110px; height: 110px;}
+      .img-css {     width: 80px;  height: 80px;} 
+}

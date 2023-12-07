@@ -1,42 +1,32 @@
-import React, { useState } from 'react';
-
+import React from 'react'
+import Grid from '@mui/material/Grid';
+import Box from '@mui/system/Box';
+import Dialogbox from './Dialogbox';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import './cart.css'
 const Addcart = () => {
-  const data = [
-    { id: 'item1', category: 'item1', text: 'Item 1' },
-    { id: 'item2', category: 'item2', text: 'Item 2' },
-    { id: 'item3', category: 'item3', text: 'Item 3' },
-    // Add more items as needed
-  ];
-
-  const categories = Array.from(new Set(data.map(item => item.category))); 
-
-  const [selectedTab, setSelectedTab] = useState(categories[0]);
-
-  // Filter data based on the selected tab
-  const filteredData = data.filter(item => item.category === selectedTab);
-
   return (
-    <div>
-      <div>
-        {categories.map(category => (
-          <button
-            key={category}
-            onClick={() => setSelectedTab(category)}
-            className={selectedTab === category ? 'active' : ''}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+    <>
+      <Grid container>
+           <Grid item xs={12} 
+           sx={{padding:"20px",
+           marginBottom:'20px',
+           alignItems:'center',
+           display:"flex",
+           justifyContent:"space-between",
+           flexWrap:'wrap'}}>
+            <Box>
+            <h2>Order List</h2>
+            <p>Transaction id : #65565</p>
+            </Box>
+            <Box sx={{display:'flex',alignItems:"center"}}>
+            <Dialogbox/>
+            <MoreHorizIcon fontSize='large' sx={{color:'rgb(149, 165, 166)'}}/>
+            </Box>
+           </Grid>
+      </Grid>
+    </>
+  )
+}
 
-      <div>
-        {/* Render the filtered data */}
-        {filteredData.map(item => (
-          <div key={item.id}>{item.text}</div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Addcart;
+export default Addcart

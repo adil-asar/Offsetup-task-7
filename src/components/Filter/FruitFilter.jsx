@@ -30,7 +30,7 @@ const FruitFilter = () => {
   ];
 
   const [scroll, setscroll] = useState(0);
-  const [activeButton, setActiveButton] = useState('left');
+
 
   const [selectedCategory, setSelectedCategory] = useState('Fruits'); 
   const taget_area = useRef(null);
@@ -39,7 +39,7 @@ const FruitFilter = () => {
     const newScrollPosition = scroll + amount;
     setscroll(newScrollPosition);
     taget_area.current.scrollLeft = newScrollPosition;
-    setActiveButton(scroll > 0 ? "left" : "right")
+ 
   }
 
   // filtering fuction
@@ -58,11 +58,11 @@ const FruitFilter = () => {
       {/* categories tab and filter */}
       <div className="scroll_button">
       <button 
-        disabled={activeButton === "left"}
-        onClick={()=>handleSCroll(-370)}> <IoIosArrowBack className='l-arrow' /></button>
+        
+        onClick={()=>handleSCroll(-250)}> <IoIosArrowBack className='l-arrow' /></button>
         <button 
-        disabled={activeButton === "right"}
-        onClick={()=>handleSCroll(370)}> <IoIosArrowForward className='r-arrow' /> </button>
+      
+        onClick={()=>handleSCroll(250)}> <IoIosArrowForward className='r-arrow' /> </button>
       </div>
       {/* Tabs */}
       <div className="tabs" ref={taget_area}>
