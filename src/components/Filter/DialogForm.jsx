@@ -23,7 +23,7 @@ const DialogForm = () => {
 
   return (
     <React.Fragment>
-    <Button variant="outlined"
+    <Button
      sx={{width:"100%",
      border: "3px solid rgb(46, 204, 113)",
      color:'rgb(46, 204, 113)',
@@ -31,7 +31,7 @@ const DialogForm = () => {
      letterSpacing:'2px',
      textTransform:'capitalize',
      fontFamily:'"Titillium Web", sans-serif',
-     backgroundColor: 'white',
+     backgroundColor: '',
      '&:hover': {
         backgroundColor: 'rgb(46, 204, 113)', 
         border: "3px solid rgb(46, 204, 113)",

@@ -4,6 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1000; /* Add this line */
   position: fixed;
   display: flex;
   justify-content: space-between;
