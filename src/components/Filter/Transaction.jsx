@@ -143,13 +143,12 @@ const Transaction = () => {
               </Button>
             </Box>
             {/* search bar and operation  */}
-            <Box sx={{margin:"40px 0"}}>
+            <Box sx={{margin:"40px 0",display:'flex',justifyContent:"space-between"}}>
             <TextField
           label="Search"
           size="small"
           id="outlined-start-adornment"
-          
-          sx={{}}
+          sx={{width:'35%'}}
           InputProps={{
             startAdornment: 
             <InputAdornment position="start">
@@ -157,6 +156,13 @@ const Transaction = () => {
                 </InputAdornment>,
           }}
         />
+        {/* file generation */}
+        <Box>
+        <SearchIcon/>
+        <SearchIcon/>
+        <SearchIcon/>
+        </Box>
+      
             </Box>
           </DialogContentText>
         </DialogContent>
