@@ -16,7 +16,7 @@ import PauseIcon from '@mui/icons-material/Pause';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import CreateIcon from '@mui/icons-material/Create';
 import PaymentIcon from '@mui/icons-material/Payment';
-import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import Transaction from './Transaction';
 
 const ShoppingCart = () => {
 
@@ -133,7 +133,7 @@ flexDirection:"column",
   width:'45%',
   },
 }}>
-  <CreditCardIcon fontSize='large' />
+  <CreditCardIcon fontSize='large'  sx={{color:'rgb(178, 190, 195)'}} />
   <p style={{marginTop:"5px"}}>Cash</p>
 </Box>
 
@@ -150,7 +150,7 @@ flexDirection:"column",
   width:'45%',
   },
 }}>
-  <PaymentsIcon fontSize='large' />
+  <PaymentsIcon fontSize='large'  sx={{color:'rgb(178, 190, 195)'}}/>
   <p style={{marginTop:"5px"}}>Debit</p>
 </Box>
 
@@ -167,7 +167,7 @@ flexDirection:"column",
   width:'45%',
   },
 }}>
-  <QrCodeScannerOutlinedIcon fontSize='large' />
+  <QrCodeScannerOutlinedIcon fontSize='large' sx={{color:'rgb(178, 190, 195)'}} />
   <p style={{marginTop:"5px"}}>Scan</p>
 </Box>
 </Box>
@@ -177,14 +177,14 @@ flexDirection:"column",
   sx={{
     width: "100%",
     fontWeight: "bold",
-    bgcolor: "purple",
+    bgcolor: "rgb(108, 92, 231)",
     textTransform: "capitalize",
     fontFamily: '"Titillium Web", sans-serif',
     display:'flex',
     justifyContent:'space-between',
     padding:'10px 15px',
     "&:hover": {
-      backgroundColor: "purple",
+      backgroundColor: "rgb(108, 92, 231)",
       
     },
   }}>
@@ -195,11 +195,17 @@ flexDirection:"column",
 {/* chips */}
 <Grid container sx={{marginTop:'20px'}} spacing={2} >
 
-<Grid item md={3} sm={6} xs={12}  ><Chip sx={{width:'100%',}}  icon={<PauseIcon fontSize='small' />}  label="Hold" /> </Grid>
-<Grid item md={3} sm={6} xs={12}  ><Chip sx={{width:'100%',}}  icon={<CreateIcon fontSize='small' />}  label="Quotation" /> </Grid>
-<Grid item md={3} sm={6} xs={12}  ><Chip sx={{width:'100%',}}  icon={<DeleteOutlineIcon fontSize='small' />}  label="Void" /> </Grid>
-<Grid item md={3} sm={6} xs={12}  ><Chip sx={{width:'100%',}}  icon={<PaymentIcon fontSize='small' />}  label="Payment" /> </Grid>
-<Grid item md={3} sm={6} xs={12}  ><Chip sx={{width:'100%',}}  icon={<CreditScoreIcon fontSize='small' />}  label="Transaction" /> </Grid>
+<Grid item md={3} sm={6} xs={12}  >
+  <Chip sx={{width:'100%',}}  icon={<PauseIcon fontSize='small' />}  label="Hold" /> </Grid>
+<Grid item md={3} sm={6} xs={12}  >
+  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<CreateIcon fontSize='small' />}  label="Quotation" /> </Grid>
+<Grid item md={3} sm={6} xs={12}  >
+  <Chip sx={{width:'100%',}}  icon={<DeleteOutlineIcon fontSize='small' />}  label="Void" /> </Grid>
+<Grid item md={3} sm={6} xs={12}  >
+  <Chip sx={{width:'100%',}}  icon={<PaymentIcon fontSize='small' />}  label="Payment" /> </Grid>
+<Grid item md={3} sm={6} xs={12}  >   
+<Transaction />
+</Grid>
 
 </Grid>
 

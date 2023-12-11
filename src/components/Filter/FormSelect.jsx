@@ -19,7 +19,7 @@ export default function FormSelect({name,val1,val2}) {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          sx={{bgcolor:'white'}}
+          sx={{bgcolor:'white',textAlign:'left'}}
           value={age}
           label="Age"
           onChange={handleChange}

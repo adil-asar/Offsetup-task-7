@@ -52,13 +52,13 @@ const CardShoping = ({name,code,price,image}) => {
                     style={{border:'none',cursor:'pointer',
                     backgroundColor:'rgb(223, 230, 233)',
                     borderRadius:'15px',padding:'4px 8px',
-                    marginRight:'10px'}} >1</button>
+                    marginRight:'10px'}} >+</button>
                     <p style={{color:'#000',fontWeight:'bold'}}> {count} </p>
                     <button
                     onClick={()=>{setcount(count-1) }}
                       style={{border:'none',cursor:'pointer',
                       borderRadius:'15px',backgroundColor:'rgb(223, 230, 233)',
-                      padding:'4px 8px',marginLeft:'10px'}}>2</button>
+                      padding:'4px 8px',marginLeft:'10px'}}>-</button>
                 </Box>
             </Box>
             </Box>

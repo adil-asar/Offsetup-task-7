@@ -5,6 +5,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Typography from '@mui/material/Typography';
+
 const Dialogsub = ({setOpen}) => {
     const [dialog, setdialog] = React.useState(false);
 
@@ -19,29 +21,79 @@ const Dialogsub = ({setOpen}) => {
     };
   return (
     <React.Fragment>
-      <Button onClick={handleClickOpen}>
-        Open 
+      <Button
+       sx={{bgcolor:'#FF9F43',
+       color:"white", textTransform:"capitalize",
+       padding:'7px 18px', fontSize:"18px",
+       fontFamily:'Titillium Web, sans-serif',
+       letterSpacing:'1px',
+       '&:hover': {
+         backgroundColor: '#FF9F43', 
+       },
+       '@media screen and (max-width: 425px)': {
+        fontSize:"15px",
+        padding:'4px 8px',
+        },
+     }}
+      onClick={handleClickOpen}>
+        Yes, delete it!
       </Button>
       <Dialog
         open={dialog}
+        fullWidth
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+        <Typography  variant="h2"
+       sx={{
+        textAlign:"center",
+      fontWeight:"400",
+      fontSize:'28px',
+      color:'rgb(83, 92, 104)',
+      fontFamily:'Titillium Web, sans-serif',
+      '@media screen and (max-width: 425px)': {
+        fontSize:"24px",
+        },
+      }}>Are you sure?</Typography  >
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+          <Typography 
+        variant="subtitle1"
+         sx={{
+        textAlign:"center",
+        fontFamily:'Titillium Web, sans-serif',
+        color:'rgb(83, 92, 104)',
+        fontSize:'20px',
+        '@media screen and (max-width: 425px)': {
+          fontSize:'15px',
+          },
+   }}>
+  Your file has been deleted.
+    </Typography>
           </DialogContentText>
         </DialogContent>
-        <DialogActions sx={{ justifyContent: "center" }}>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
-          </Button>
+        <DialogActions sx={{ justifyContent: "center",marginTop:'0px',marginBottom:'20px' }}>
+          <Button
+           sx={{
+            bgcolor:'rgb(56, 103, 214)',
+           color:"white", 
+           textTransform:"capitalize",
+           padding:'7px 18px', 
+           fontSize:"18px",
+           fontFamily:'Titillium Web, sans-serif',
+           letterSpacing:'1px',
+           '&:hover': {
+             backgroundColor: 'rgb(56, 103, 214)', 
+           },
+           '@media screen and (max-width: 425px)': {
+            fontSize:"15px",
+            padding:'4px 8px',
+            },
+         }}
+           onClick={handleClose}>Ok</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
