@@ -21,9 +21,12 @@ const Dialogbox = () => {
 
   return (
     <React.Fragment>
-    <DeleteOutlineOutlinedIcon fontSize='large'  sx={{color:'#FF9F43',marginRight:'10px',borderRadius:'4px' ,padding:'5px', bgcolor:"#fff"}} onClick={handleClickOpen}>
+    <DeleteOutlineOutlinedIcon
+     fontSize='large'
+       sx={{color:'#FF9F43',marginRight:'10px',borderRadius:'4px' ,padding:'5px', bgcolor:"#fff"}} onClick={handleClickOpen}>
       Open 
-    </DeleteOutlineOutlinedIcon >
+    </DeleteOutlineOutlinedIcon
+     >
     <Dialog
       open={open}
       onClose={handleClose}
