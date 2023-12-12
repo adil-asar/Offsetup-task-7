@@ -1,0 +1,36 @@
+
+
+.rdt_Table{
+    margin-top: 20px;
+    border: 1px solid rgb(223, 230, 233);
+    overflow-x: scroll;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: rgb(245, 246, 250);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FF9F43;
+  }
+  
+
+  .data-table-extensions-filter {
+    border: 1px solid rgb(178, 190, 195);
+    border-radius: 7px;
+    padding: 3px 5px;
+    width: 40%;
+    color: black;
+  }
+
+  .filter-text {
+    border: none !important;
+    width: 93%;
+  }  

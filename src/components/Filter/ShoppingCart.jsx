@@ -196,13 +196,13 @@ flexDirection:"column",
 <Grid container sx={{marginTop:'20px'}} spacing={2} >
 
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',}}  icon={<PauseIcon fontSize='small' />}  label="Hold" /> </Grid>
+  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<PauseIcon fontSize='small' />}  label="Hold" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >
   <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<CreateIcon fontSize='small' />}  label="Quotation" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',}}  icon={<DeleteOutlineIcon fontSize='small' />}  label="Void" /> </Grid>
+  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<DeleteOutlineIcon fontSize='small' />}  label="Void" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',}}  icon={<PaymentIcon fontSize='small' />}  label="Payment" /> </Grid>
+  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<PaymentIcon fontSize='small' />}  label="Payment" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >   
 <Transaction />
 </Grid>

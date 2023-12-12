@@ -44,7 +44,7 @@ const Dialogbox = () => {
       fontSize:'28px',
       color:'rgb(83, 92, 104)',
       fontFamily:'Titillium Web, sans-serif',
-      '@media screen and (max-width: 425px)': {
+      '@media screen and (maxWidth: 425px)': {
         fontSize:"24px",
         },
       }}>Are you sure?</Typography  >
@@ -59,7 +59,7 @@ const Dialogbox = () => {
         fontFamily:'Titillium Web, sans-serif',
         color:'rgb(83, 92, 104)',
         fontSize:'20px',
-        '@media screen and (max-width: 425px)': {
+        '@media screen and (maxWidth: 425px)': {
           fontSize:'15px',
           },
    }}>
@@ -74,13 +74,14 @@ const Dialogbox = () => {
         <Button 
         sx={{bgcolor:'rgb(235, 77, 75)',
         color:"white", textTransform:"capitalize",
-        padding:'7px 18px', fontSize:"18px",
+        padding:'7px 18px', 
+        fontSize:"18px",
         fontFamily:'Titillium Web, sans-serif',
         letterSpacing:'1px',
         '&:hover': {
           backgroundColor: 'rgb(235, 77, 75)', 
         },
-        '@media screen and (max-width: 425px)': {
+        '@media screen and (maxWidth: 425px)': {
           fontSize:"15px",
           padding:'4px 8px',
           },

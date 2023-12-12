@@ -74,7 +74,7 @@ const DialogForm = () => {
               fontSize: "23px",
               color: "rgb(45, 52, 54)",
               fontFamily: "Titillium Web, sans-serif",
-              "@media screen and (max-width: 425px)": {
+              "@media screen and (maxWidth: 425px)": {
                 fontSize: "21px",
               },
             }}
@@ -165,7 +165,7 @@ const DialogForm = () => {
               "&:hover": {
                 backgroundColor: "rgb(211, 84, 0)",
               },
-              "@media screen and (max-width: 425px)": {
+              "@media screen and (maxWidth: 425px)": {
                 fontSize: "15px",
                 padding: "4px 8px",
               },
@@ -185,7 +185,7 @@ const DialogForm = () => {
               "&:hover": {
                 backgroundColor: "rgb(34, 47, 62)",
               },
-              "@media screen and (max-width: 425px)": {
+              "@media screen and (maxWidth: 425px)": {
                 fontSize: "15px",
                 padding: "4px 8px",
               },

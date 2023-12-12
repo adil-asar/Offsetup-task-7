@@ -21,7 +21,7 @@ const CardShoping = ({name,code,price,image}) => {
         <Box 
         sx={{display:'flex',flexWrap:'wrap',textAlign:'center',
         justifyContent:'start',width:'50%',alignItems:"center",
-        '@media screen and (max-width: 400px)': {
+        '@media screen and (maxWidth: 400px)': {
           justifyContent:'center',
         },
         }}>
@@ -64,7 +64,7 @@ const CardShoping = ({name,code,price,image}) => {
             </Box>
         <Box sx={{
           display:'flex',justifyContent:'end',width:'50%',flexWrap:'wrap',alignItems:'center',
-          '@media screen and (max-width: 400px)': {
+          '@media screen and (maxWidth: 400px)': {
             flexDirection:'column',
             alignItems:'end',
           },
@@ -72,9 +72,9 @@ const CardShoping = ({name,code,price,image}) => {
           <p style={{
             marginBottom:'0px',
             marginRight:'25px',
-            '@media screen and (max-width: 400px)': {
+            '@media screen and (maxWidth: 400px)': {
             textAlign:'right',
-            '@media screen and (max-width: 400px)': {
+            '@media screen and (maxWidth: 400px)': {
                 marginBottom:'25px',
               },
             

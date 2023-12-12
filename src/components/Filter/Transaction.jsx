@@ -14,6 +14,10 @@ import Box from "@mui/system/Box";
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
+import LocalPrintshopOutlinedIcon from '@mui/icons-material/LocalPrintshopOutlined';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import TableTransaction from "./TableTransaction";
 
 const Transaction = () => {
   const [open, setOpen] = React.useState(false);
@@ -87,7 +91,7 @@ const Transaction = () => {
         <Divider />
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            <Box>
+            <Box   sx={{marginBottom:'30px'}}>
               <Button
                 sx={{
                   bgcolor: "#FF9F43",
@@ -143,8 +147,8 @@ const Transaction = () => {
               </Button>
             </Box>
             {/* search bar and operation  */}
-            <Box sx={{margin:"40px 0",display:'flex',justifyContent:"space-between"}}>
-            <TextField
+            {/* <Box sx={{margin:"40px 0",display:'flex',justifyContent:"space-between",alignItem:'center'}}> */}
+            {/* <TextField
           label="Search"
           size="small"
           id="outlined-start-adornment"
@@ -155,16 +159,16 @@ const Transaction = () => {
               <SearchIcon/>
                 </InputAdornment>,
           }}
-        />
+        /> */}
         {/* file generation */}
-        <Box>
-        <SearchIcon/>
-        <SearchIcon/>
-        <SearchIcon/>
-        </Box>
-      
-            </Box>
+        {/* <Box>
+        <PictureAsPdfIcon sx={{color:'rgb(235, 59, 90)'}} fontSize="large"/>
+        <InsertDriveFileIcon  sx={{color:'rgb(38, 222, 129)',marginLeft:'15px'}} fontSize="large"/>
+        <LocalPrintshopOutlinedIcon  sx={{color:'rgb(165, 177, 194)',marginLeft:'15px'}} fontSize="large"/>
+        </Box> */}
+            {/* </Box> */}
           </DialogContentText>
+          <TableTransaction/>
         </DialogContent>
         <DialogActions></DialogActions>
       </Dialog>

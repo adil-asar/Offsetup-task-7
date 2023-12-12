@@ -10,3 +10,20 @@
 body{
   font-family: 'Titillium Web', sans-serif;
 }
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: rgb(245, 246, 250);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF9F43;
+}
+
