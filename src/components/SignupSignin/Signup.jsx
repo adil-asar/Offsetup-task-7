@@ -45,6 +45,11 @@ Continue where you left off
 <TextField 
 fullWidth 
 size="small"
+label="Full Name"
+ id="Full Name" />
+<TextField 
+fullWidth 
+size="small"
 sx={{margin:"30px 0"}}
 label="Email"
  id="Email" />
@@ -66,8 +71,11 @@ sx={{
     textTransform:"capitalize",
     marginTop:'30px',
     color:"#fff",
+    border:'1px solid #FF9F43',
     '&:hover': {
-        backgroundColor: '#FF9F43', 
+        backgroundColor: '#fff', 
+        color:"#FF9F43",
+        border:'1px solid #FF9F43'
       },
 }}
  >
@@ -102,16 +110,27 @@ Or sign up with
 
 <Box sx={{margin:'30px 0',display:"flex",justifyContent:"space-between"}}>
 <Button size="large" 
+startIcon={< GoogleIcon/>}
 sx={{width:'47.5%',border:"1px solid rgb(209, 204, 192)",color:'rgb(83, 92, 104)',  
-fontFamily:'Titillium Web, sans-serif', textTransform:"capitalize"}}>
-  <GoogleIcon fontSize="small" sx={{marginRight:"15px",color:'rgb(83, 92, 104)'}} />
+fontFamily:'Titillium Web, sans-serif', textTransform:"capitalize",
+'&:hover': {
+  backgroundColor: '#FF9F43', 
+  color:"#fff",
+  border:'1px solid #FF9F43',
+  },}}>
+  
   Sign Up using google
   </Button>
 
 <Button size="large"
+ startIcon={< FacebookIcon/>}
  sx={{width:'47.5%',border:"1px solid rgb(209, 204, 192)",color:'rgb(83, 92, 104)',
-  fontFamily:'Titillium Web, sans-serif', textTransform:"capitalize"}}>
-     <FacebookIcon fontSize="small" sx={{marginRight:"15px",color:'rgb(83, 92, 104)'}} />
+  fontFamily:'Titillium Web, sans-serif', textTransform:"capitalize",
+  '&:hover': {
+    backgroundColor: '#FF9F43', 
+    color:"#fff",
+    border:'1px solid #FF9F43',
+    },}}>
     Sign Up using facebook
     </Button>
 </Box>
