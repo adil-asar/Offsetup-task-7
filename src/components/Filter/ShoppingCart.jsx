@@ -1,10 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState , useContext } from 'react'
 import Button from "@mui/material/Button";
-import banana from "../../assets/product35.jpg";
-import orange from "../../assets/product29.jpg";
 import Grid from "@mui/material/Grid";
-import shoe1 from "../../assets/product60.jpg";
-import snaks1 from "../../assets/product47.jpg";
 import Chip from '@mui/material/Chip';
 import QrCodeScannerOutlinedIcon from '@mui/icons-material/QrCodeScannerOutlined';
 import PaymentsIcon from '@mui/icons-material/Payments';
@@ -17,17 +13,12 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import CreateIcon from '@mui/icons-material/Create';
 import PaymentIcon from '@mui/icons-material/Payment';
 import Transaction from './Transaction';
+import ProductContext from '../../Context/ProductContext';
+import { IndeterminateCheckBoxOutlined } from '@mui/icons-material';
 
 const ShoppingCart = () => {
 
-  const shoppingdata = [ 
-    { id:'1',name:'Banana',price:'3000',code:'pt001',image:banana},
-    { id:'2',name:'Sashimi',price:'3000',code:'pt001',image:snaks1},
-    { id:'3',name:'Orange',price:'3000',code:'pt001',image:orange},
-    { id:'4',name:'Red Nike',price:'3000',code:'pt001',image:shoe1},
-];
-
-
+  const {cart_items,subtotal,total,tax,totalItems,removeAllItems} = useContext(ProductContext)
   return (
     <Box  sx={{bgcolor:'#fff', marginTop:'20px',borderRadius:'7px', padding: "20px"}}>
   <Box sx={{display:'flex', justifyContent:'space-between',alignItems:'center', marginBottom:'20px'}}>
@@ -37,23 +28,29 @@ const ShoppingCart = () => {
     borderRadius:'20px',
     fontWeight:"bold",
     letterSpacing:'1px',
-    color:': purple'
-    }}>Total Items : {shoppingdata.length}</p>
+    color:': purple',
+  
+    }}>Total Items : {totalItems}</p>
     <p style={{fontSize:'13px',
      fontWeight:"bold",
     letterSpacing:'1px',
-  
-    }}>Clear All</p>
+    cursor:'pointer'
+    }}
+    onClick={removeAllItems}
+    > Clear All </p>
   </Box>
 {/* cart */}
 <Box sx={{height:'250px',overflowY:'scroll',padding:'10px'}} >
 {/* shoping card item  */}
 {
-  shoppingdata.map((item) => <CardShoping key={item.id}
+  cart_items.map((item,index) => <CardShoping
+  key={index}
    image={item.image} 
    price={item.price} 
    name={item.name}
    code={item.code}
+   id={item.id}
+   quantity={item.qty}
    />)
 }
 
@@ -75,7 +72,7 @@ const ShoppingCart = () => {
    
    }} >
     <p>SubTotal</p>
-     <p>55.00$</p>
+     <p>{subtotal}$</p>
   </Box>
   <Box sx={{
     display:'flex',
@@ -89,7 +86,7 @@ const ShoppingCart = () => {
       },
     }} >
     <p>Tax</p>
-     <p>20.00$</p>
+     <p>{tax}$</p>
   </Box>
   <Box sx={{display:'flex', 
   justifyContent:'space-between', 
@@ -103,7 +100,7 @@ const ShoppingCart = () => {
     },
    }} >
     <p >Total</p>
-     <p>55.00$</p>
+     <p>{total}$</p>
   </Box>
 
 <Box></Box>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -8,18 +8,23 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Dialogsub from './Dialogsub';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import Typography from '@mui/material/Typography';
+import ProductContext from '../../Context/ProductContext';
 
-const Dialogbox = () => {
-
+const Dialogbox = ({itemid}) => {
+  
   const [open, setOpen] = React.useState(false);
+  const { removeItem } = useContext(ProductContext);
 
   const handleClickOpen = () => {
     setOpen(true);
+    // handleRemoveSingleItem()
   };
 
   const handleClose = () => {
     setOpen(false);
   };
+
+ 
 
   return (
     <>
@@ -70,7 +75,9 @@ const Dialogbox = () => {
 
       <DialogActions sx={{ justifyContent: "center",marginTop:'0px',marginBottom:'20px' }}>
         {/* submodal */}
-        <Dialogsub setOpen={setOpen}/>           
+        <Dialogsub 
+        id={itemid}
+        setOpen={setOpen}/>           
         <Button 
         sx={{bgcolor:'rgb(235, 77, 75)',
         color:"white", textTransform:"capitalize",

@@ -1,10 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useContext } from 'react'
 import "./filter.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import items from './items.js'
 import ProductCard from './ProductCard';
+import ProductContext from '../../Context/ProductContext';
+
 const FruitFilter = () => {
+
+  const {items,addToCart} = useContext(ProductContext)
 
   const dataCard = [
     { id: "01",
@@ -23,10 +26,7 @@ const FruitFilter = () => {
      url:"https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/100/external-mobilephone-marketing-xnimrodx-lineal-color-xnimrodx-3.png"  , name: "Computers" },
     { id: "08", 
      url:"https://img.icons8.com/avantgarde/100/bicycle.png"  , name: "Cycles" },
-     { id: "09", 
-     url:"https://img.icons8.com/fluency/100/shoes.png"   , name: "Shoes" },
-     { id: "10",
-      url:"https://img.icons8.com/color/100/bracelet.png"  , name: "Accessories" },
+    
   ];
 
   const [scroll, setscroll] = useState(0);
@@ -47,6 +47,8 @@ const FruitFilter = () => {
     setSelectedCategory(category);
   };
   const filteredItems = items.filter(item => item.category === selectedCategory);
+
+  
 
   return (
     <div className="filter_css">
@@ -81,7 +83,14 @@ const FruitFilter = () => {
 
 <div className='tabs_items'>
 {filteredItems.map((item) => (
-          <ProductCard key={item.id} name={item.name} source={item.src} price={item.price} categ={item.category} />
+          <ProductCard 
+           key={item.id}
+            name={item.name}
+             source={item.src} 
+             price={item.price} 
+             categ={item.category}
+             quantity={item.qty} 
+             itemid={item.id}/>
         ))}
 
 </div>

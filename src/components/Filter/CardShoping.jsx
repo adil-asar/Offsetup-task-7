@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState , useContext } from 'react'
 import Dialogbox from './Dialogbox';
 import Box from "@mui/system/Box";
+import ProductContext from '../../Context/ProductContext';
 
+const CardShoping = ({id,name,code,price,image,quantity}) => {
 
-const CardShoping = ({name,code,price,image}) => {
+  const {incrementQuantity,decrementQuantity} = useContext(ProductContext)
+  
+  const  handleDecrementQuantity = () => {
+    decrementQuantity(id);
+  };
 
-        
-    const [count, setcount] = useState(0)
+  const handleIncrementQuantity = () => {
+    incrementQuantity(id);
+  };
 
   return (
     <Box sx={{
@@ -47,18 +54,23 @@ const CardShoping = ({name,code,price,image}) => {
                 letterSpacing:'1px'}}>{code}</p>
 
                 <Box  sx={{display:'flex',alignItems:'center'}}>
+                  
+                <button
+                      onClick={handleDecrementQuantity}
+                      style={{border:'none',cursor:'pointer',
+                      borderRadius:'15px',
+                      backgroundColor:'rgb(223, 230, 233)',
+                      padding:'4px 8px',}}>-</button>
+
+                    <p style={{color:'#000',fontWeight:'bold',margin:'0 10px'}}> {quantity} </p>
+                      
                     <button 
-                      onClick={()=>{setcount(count+1)}}
+                     onClick={handleIncrementQuantity}
                     style={{border:'none',cursor:'pointer',
                     backgroundColor:'rgb(223, 230, 233)',
                     borderRadius:'15px',padding:'4px 8px',
-                    marginRight:'10px'}} >+</button>
-                    <p style={{color:'#000',fontWeight:'bold'}}> {count} </p>
-                    <button
-                    onClick={()=>{setcount(count-1) }}
-                      style={{border:'none',cursor:'pointer',
-                      borderRadius:'15px',backgroundColor:'rgb(223, 230, 233)',
-                      padding:'4px 8px',marginLeft:'10px'}}>-</button>
+                   }} >+</button>
+
                 </Box>
             </Box>
             </Box>
@@ -80,7 +92,7 @@ const CardShoping = ({name,code,price,image}) => {
             
             },
             }}>{price}</p>
-          <Dialogbox/>
+          <Dialogbox itemid={id}/>
         </Box>
     </Box>
   )

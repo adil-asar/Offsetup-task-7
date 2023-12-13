@@ -53,6 +53,10 @@ const DialogForm = () => {
             color: "#fff",
           },
           padding: "12px",
+          '@media screen and (max-width:425px)': {
+            fontWeight: "400",
+            padding:'5px 0'
+            },
         }}
         onClick={handleClickOpen}
       >

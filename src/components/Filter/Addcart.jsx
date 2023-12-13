@@ -52,24 +52,30 @@ const Addcart = () => {
             {/* barcode btn */}
             <Button
               variant="contained"
+              startIcon={<QrCodeOutlinedIcon/>}
               sx={{
                 marginTop: "20px",
-                // marginLeft: "210px",
                 width: "50%",
                 fontWeight: "bold",
                 bgcolor: "rgb(108, 92, 231)",
                 letterSpacing: "2px",
                 textTransform: "capitalize",
                 fontFamily: '"Titillium Web", sans-serif',
+             
                 "&:hover": {
                   backgroundColor: "#FF9F43",
                   color: "#fff",
                 },
                 padding: "12px",
+                '@media screen and (max-width:425px)': {
+                  width: "100%",
+                  // bgcolor: "rgb(108, 92, 231)",
+                  fontWeight: "400",
+                  },
               }}
             
             >
-              <QrCodeOutlinedIcon sx={{ marginRight: "10px" }} /> Scan Bar Code
+               Scan Bar Code
             </Button>
           </Box>
           {/* shopping cart  */}

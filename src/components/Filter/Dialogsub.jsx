@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -6,18 +6,26 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Typography from '@mui/material/Typography';
+import ProductContext from '../../Context/ProductContext';
 
-const Dialogsub = ({setOpen}) => {
+const Dialogsub = ({setOpen,id}) => {
     const [dialog, setdialog] = React.useState(false);
+    const { removeItem } = useContext(ProductContext);
 
     const handleClickOpen = () => {
       setdialog(true);
   
     };
+
+    const handleRemoveSingleItem = () => {
+      removeItem(id);
+     
+    };
   
     const handleClose = () => {
       setdialog(false);
       setOpen(false);
+      handleRemoveSingleItem()
     };
   return (
     <React.Fragment>
