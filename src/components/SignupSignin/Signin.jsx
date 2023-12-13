@@ -5,16 +5,20 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import logo from '../../assets/logo.png'
 
 
 const Signin = () => {
   return (
-    <Grid container sx={{marginTop:'65px'}}>
+    <Grid container sx={{marginTop:'65px',}}>
       <Grid
        item xs={12}
         lg={6}
-        sx={{  padding:"25px"}}
+        sx={{  padding:"25px",height: "90.3vh",overflowY:'scroll'}}
         >
+          <img src={logo} style={{width:"150px",marginBottom:'20px'}} alt="logo" />
 <Typography
 sx={{
     fontWeight:"400",
@@ -90,6 +94,36 @@ sx={{
 variant="body1">
 Don’t have an account? Sign Up
 </Typography>
+
+
+<Typography
+sx={{
+    fontWeight:"400",
+    fontSize:'16px',
+    color:'rgb(83, 92, 104)',
+    fontFamily:'Titillium Web, sans-serif',
+    textAlign:'center',
+    margin:'20px 0',
+}} 
+variant="body1">
+Or sign up with
+</Typography>
+
+<Box sx={{margin:'30px 0',display:"flex",justifyContent:"space-between"}}>
+<Button size="large" 
+sx={{width:'47.5%',border:"1px solid rgb(209, 204, 192)",color:'rgb(83, 92, 104)',  
+fontFamily:'Titillium Web, sans-serif', textTransform:"capitalize"}}>
+  <GoogleIcon fontSize="small" sx={{marginRight:"15px",color:'rgb(83, 92, 104)'}} />
+  Sign Up using google
+  </Button>
+
+<Button size="large"
+ sx={{width:'47.5%',border:"1px solid rgb(209, 204, 192)",color:'rgb(83, 92, 104)',
+  fontFamily:'Titillium Web, sans-serif', textTransform:"capitalize"}}>
+     <FacebookIcon fontSize="small" sx={{marginRight:"15px",color:'rgb(83, 92, 104)'}} />
+    Sign Up using facebook
+    </Button>
+</Box>
 </Box>
 </Grid>
 
@@ -107,8 +141,9 @@ Don’t have an account? Sign Up
           src={login}
           style={{ 
             width: "100%", 
-            marginBottom: "-7px",
+            marginBottom: "-6px",
              height: "90.3vh",
+             position:'fixed'
              }}
           alt="login pic"
         />
