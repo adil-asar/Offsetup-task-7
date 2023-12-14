@@ -14,8 +14,7 @@ import CreateIcon from '@mui/icons-material/Create';
 import PaymentIcon from '@mui/icons-material/Payment';
 import Transaction from './Transaction';
 import ProductContext from '../../Context/ProductContext';
-import { IndeterminateCheckBoxOutlined } from '@mui/icons-material';
-
+import Checkout from './Checkout';
 const ShoppingCart = () => {
 
   const {cart_items,subtotal,totalPrice,totalTax,totalItems,removeAllItems} = useContext(ProductContext);
@@ -173,24 +172,7 @@ flexDirection:"column",
 </Box>
 {/* checkout */}
 <Box sx={{marginTop:'20px'}}>
-  <Button 
-  sx={{
-    width: "100%",
-    fontWeight: "bold",
-    bgcolor: "rgb(108, 92, 231)",
-    textTransform: "capitalize",
-    fontFamily: '"Titillium Web", sans-serif',
-    display:'flex',
-    justifyContent:'space-between',
-    padding:'10px 15px',
-    "&:hover": {
-      backgroundColor: "rgb(108, 92, 231)",
-      
-    },
-  }}>
- <p style={{color:'white' ,letterSpacing:"2px",}}> Checkout</p>
-  <p style={{color:'white', letterSpacing:"2px",}}>60.00$</p>
-</Button>
+  <Checkout/>
 </Box>
 {/* chips */}
 <Grid container sx={{marginTop:'20px'}} spacing={2} >
