@@ -30,7 +30,16 @@ const Dialogbox = ({itemid}) => {
     <>
     <DeleteOutlineOutlinedIcon
      fontSize='large'
-       sx={{color:'#FF9F43',marginRight:'10px',borderRadius:'4px' ,padding:'5px', bgcolor:"#fff"}} onClick={handleClickOpen}>
+       sx={{color:'#FF9F43',
+       marginRight:'10px',
+       borderRadius:'4px'
+        ,padding:'5px',
+        bgcolor:"#fff", 
+        '&:hover': {
+          bgcolor:"#FF9F43",
+          color:'#fff'
+        },}}
+         onClick={handleClickOpen}>
       Open 
     </DeleteOutlineOutlinedIcon
      >

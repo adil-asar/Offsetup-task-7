@@ -46,13 +46,24 @@ const ShoppingCart = () => {
     color:': purple',
   
     }}>Total Items : {totalItems}</p>
-    <p style={{fontSize:'13px',
+
+    <Button sx={{fontSize:'13px',
      fontWeight:"bold",
     letterSpacing:'1px',
-    cursor:'pointer'
+    cursor:'pointer',
+    color:'gray',
+    fontWeight:'500',
+    fontFamily:'Titillium Web, sans-serif',
+    textTransform:"capitalize",
+    padding:'8px ',
+    borderRadius:'20px',
+    "&:hover": {
+     color:' #FF9F43',
+     background:'#F6F7F8', 
+    }
     }}
     onClick={removeAllItems}
-    > Clear All </p>
+    > Clear All </Button>
   </Box>
 {/* cart */}
 <Box sx={{height:'250px',overflowY:'scroll',padding:'10px'}} >
