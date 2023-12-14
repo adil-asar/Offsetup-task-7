@@ -30,18 +30,10 @@ const Addcart = () => {
             <h2>Order List</h2>
             <p>Transaction id : #65565</p>
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Dialogbox />
-            <MoreHorizIcon
-              fontSize="large"
-              sx={{ color: "rgb(149, 165, 166)" }}
-            />
-          </Box>
+          
         </Grid>
         <Grid item xs={12} sx={{ padding: "20px" }}>
           <Box sx={{ bgcolor: "#fff", borderRadius: "7px", padding: "20px",textAlign:'right' }}>
-            {/* form dialog  */}
-            <DialogForm />
             {/* select */}
             <FormSelect
               name="Chris Moris"
@@ -49,34 +41,8 @@ const Addcart = () => {
               val2="Chris Moris"
             />
             <FormSelect name="Product" val1=" Product " val2=" Bar code" />
-            {/* barcode btn */}
-            <Button
-              variant="contained"
-              startIcon={<QrCodeOutlinedIcon/>}
-              sx={{
-                marginTop: "20px",
-                width: "50%",
-                fontWeight: "bold",
-                bgcolor: "rgb(108, 92, 231)",
-                letterSpacing: "2px",
-                textTransform: "capitalize",
-                fontFamily: '"Titillium Web", sans-serif',
-             
-                "&:hover": {
-                  backgroundColor: "#FF9F43",
-                  color: "#fff",
-                },
-                padding: "12px",
-                '@media screen and (max-width:425px)': {
-                  width: "100%",
-                  // bgcolor: "rgb(108, 92, 231)",
-                  fontWeight: "400",
-                  },
-              }}
-            
-            >
-               Scan Bar Code
-            </Button>
+         
+       
           </Box>
           {/* shopping cart  */}
 

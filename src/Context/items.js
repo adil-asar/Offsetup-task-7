@@ -15,6 +15,9 @@ import computer from "../assets/product56.jpg";
 import headpoon1 from "../assets/product45.jpg";
 import headpoon2 from "../assets/product44.jpg";
 import shoe1 from "../assets/product60.jpg";
+import car1 from "../assets/passo.jpg";
+import car2 from "../assets/swift.jpg";
+import car3 from "../assets/ribbon.jpg";
 
 const items = [
   { id: 1, price:15, qty:1, name: "Banana", src: banana, category: "Fruits" },
@@ -34,6 +37,9 @@ const items = [
   { id: 15, price:15, qty:1, name: "Laptop", src: computer, category: "Computers" },
   { id: 16, price:15, qty:1, name: "Cycle", src: cycle1, category: "Cycles" },
   { id: 17, price:15, qty:1, name: "Mountain Bike", src: cycle2, category: "Cycles" },
+  { id: 18, price:15, qty:1, name: "Passo", src:car1 , category: "Cars" },
+  { id: 19, price:15, qty:1, name: "Swift", src:car2 , category: "Cars" },
+  { id: 20, price:15, qty:1, name: "Ribbon", src:car3 , category: "Cars" },
 ];
 
 export default items;

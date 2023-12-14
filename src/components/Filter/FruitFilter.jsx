@@ -10,22 +10,26 @@ const FruitFilter = () => {
   const {items,addToCart} = useContext(ProductContext)
 
   const dataCard = [
-    { id: "01",
+    { id: 1,
      url:"https://img.icons8.com/external-flaticons-flat-flat-icons/100/external-fruits-farm-flaticons-flat-flat-icons-2.png"  , name: "Fruits"  },
-    { id: "02", 
+    { id: 2, 
      url:"https://img.icons8.com/external-icongeek26-flat-icongeek26/100/external-headphone-home-appliances-icongeek26-flat-icongeek26.png"  , name: "Headphones" },
-    { id: "03",
+    { id: 3,
       url:"https://img.icons8.com/color/100/bracelet.png"  , name: "Accessories" },
-    { id: "04",
+    { id: 4,
      url:"https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/100/external-Watches-business-smashingstocks-flat-smashing-stocks.png"   , name: "Watches" },
-    { id: "05", 
+    { id: 5, 
     url:"https://img.icons8.com/color/100/hamburger.png"   , name: "Snackes" },
-    { id: "06", 
+    { id: 6, 
     url:"https://img.icons8.com/fluency/100/shoes.png"   , name: "Shoes" },
-    { id: "07", 
+    { id: 7, 
      url:"https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/100/external-mobilephone-marketing-xnimrodx-lineal-color-xnimrodx-3.png"  , name: "Computers" },
-    { id: "08", 
-     url:"https://img.icons8.com/avantgarde/100/bicycle.png"  , name: "Cycles" },
+    { id: 8, 
+     url:"https://img.icons8.com/color/100/traffic-jam.png"  , name: "Cars" },
+     { id: 9, 
+     url:"https://img.icons8.com/fluency/48/laptop.png"  , name: "Laptop" },
+     { id: 10, 
+     url:"https://img.icons8.com/cotton/100/iphone-x--v1.png"  , name: "CellPhones" },
     
   ];
 
