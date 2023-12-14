@@ -32,10 +32,14 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     align-items: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     /* margin: 0 10px; */
     border-radius: 7.5px;
+    /* border: 1px solid #fff; */
+  }
+  .tab_card:hover{
+    border: 1px solid #FF9F43;
   }
 
   .img-css {
@@ -87,7 +91,14 @@ width: 23.5%;
 background-color: #fff;
 border-radius: 7px;
 text-align: center;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+overflow: hidden;
+transition: transform 0.3s ease-in-out;
   }
+  .product_card:hover img {
+    transform: scale(1.2); /* Adjust the scale factor for zoom level */
+}
   .product_card img{
     width: 100%;
     height: 230px;
@@ -95,6 +106,15 @@ text-align: center;
     border-top-right-radius: 7px;
     margin-bottom: 15px;
   }
+
+.product_added{
+  border: 1px solid #FF9F43;
+}
+
+.product_card .icon_check{
+ color:  rgb(108, 92, 231);
+position: absolute;
+}
 
   .active{
     background-color: rgb(108, 92, 231);

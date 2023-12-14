@@ -30,6 +30,10 @@ const FruitFilter = () => {
      url:"https://img.icons8.com/fluency/48/laptop.png"  , name: "Laptop" },
      { id: 10, 
      url:"https://img.icons8.com/cotton/100/iphone-x--v1.png"  , name: "CellPhones" },
+     { id: 11, 
+      url:"https://img.icons8.com/stickers/100/cable-release.png"  , name: "Datacables" },
+      { id: 12, 
+      url:"https://img.icons8.com/fluency/100/tv.png"  , name: "Led Tv" },
     
   ];
 

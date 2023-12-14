@@ -24,6 +24,12 @@ import  thinkpad from  "../assets/thinkpad.jpg";
 import iphone  from  "../assets/11.jpg";
 import  oppo from  "../assets/oppo.jpg";
 import  redmi from  "../assets/redmi.jpg";
+import  smart from  "../assets/smart.jpg";
+import  wega from  "../assets/wega.jpg";
+import  andriod from  "../assets/andriod.jpg";
+import  cable1 from  "../assets/cable1.jpg";
+import  cable2 from  "../assets/cable2.jpg";
+import  cable3 from  "../assets/cable3.jpg";
 
 const items = [
   { id: 1, price:15, qty:1, name: "Banana", src: banana, category: "Fruits" },
@@ -52,6 +58,13 @@ const items = [
   { id: 24, price:15, qty:1, name: "Ipone 11 ", src:iphone , category: "CellPhones" },
   { id: 25, price:15, qty:1, name: "Oppo 12", src:oppo , category: "CellPhones" },
   { id: 26, price:15, qty:1, name: "Redmi 9", src:redmi , category: "CellPhones" },
+  { id: 27, price:15, qty:1, name: " Smart Tv", src: smart, category: "Led Tv" },
+  { id: 28, price:15, qty:1, name: "Andriod Tv ", src: andriod, category: "Led Tv" },
+  { id: 29, price:15, qty:1, name: " Wega Tv", src: wega, category: "Led Tv" },
+  { id: 30, price:15, qty:1, name: "Iphone ", src:cable1 , category: "Datacables" },
+  { id: 31, price:15, qty:1, name: "Type C ", src:cable2 , category: "Datacables" },
+  { id: 32, price:15, qty:1, name: "Simple ", src: cable3, category: "Datacables" },
+  
 ];
 
 export default items;
