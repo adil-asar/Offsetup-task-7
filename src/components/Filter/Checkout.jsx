@@ -80,8 +80,10 @@ export default function Checkout({ disabled }) {
           fontSize:"18px",
           fontFamily:'Titillium Web, sans-serif',
           letterSpacing:'1px',
+        cursor:'pointer',
           '&:hover': {
-            backgroundColor: '#FF9F43', 
+            backgroundColor: '#FF9F43',
+            cursor:'pointer',
           },
           '@media screen and (maxWidth: 425px)': {
             fontSize:"15px",

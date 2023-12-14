@@ -1,10 +1,21 @@
 const Reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
-      return {
-        ...state,
-        cart_items: [...state.cart_items, action.payload],
-      };
+      const existingItem = state.cart_items.find((item) => item.id === action.payload.id);
+      if (existingItem) {
+   
+        return {
+          ...state,
+          cart_items: state.cart_items.map((item) =>
+            item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          cart_items: [...state.cart_items, { ...action.payload, qty: 1 }],
+        };
+      }
     case "REMOVE_ALL_ITEMS":
       return {
         ...state,
