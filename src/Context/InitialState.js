@@ -4,17 +4,18 @@ import banana from "../assets/product35.jpg";
 
 
 const shoppingdata = [ 
-  { id:1,name:'Banana',qty:1, price:'3000',code:'Fruits',image:banana},
-  { id:2,name:'Sashimi',qty:1, price:'3000',code:'Snackes',image:snaks1},
+  { id:1,name:'Banana',qty:1, price:'24',code:'Fruits',image:banana},
+  { id:2,name:'Sashimi',qty:1, price:'22',code:'Snackes',image:snaks1},
 ];
 
 
 const initial_state = {
  cart_items:shoppingdata,
  subtotal:0,
- tax:0,
+ totalTax:0,
  total:0,
- totalItems:0
+ totalItems:0,
+ totalPrice:0,
 
 };
 

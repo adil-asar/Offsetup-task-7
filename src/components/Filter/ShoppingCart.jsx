@@ -18,7 +18,7 @@ import { IndeterminateCheckBoxOutlined } from '@mui/icons-material';
 
 const ShoppingCart = () => {
 
-  const {cart_items,subtotal,total,tax,totalItems,removeAllItems} = useContext(ProductContext)
+  const {cart_items,subtotal,totalPrice,totalTax,totalItems,removeAllItems} = useContext(ProductContext)
   return (
     <Box  sx={{bgcolor:'#fff', marginTop:'20px',borderRadius:'7px', padding: "20px"}}>
   <Box sx={{display:'flex', justifyContent:'space-between',alignItems:'center', marginBottom:'20px'}}>
@@ -86,7 +86,7 @@ const ShoppingCart = () => {
       },
     }} >
     <p>Tax</p>
-     <p>{tax}$</p>
+     <p>{totalTax}$</p>
   </Box>
   <Box sx={{display:'flex', 
   justifyContent:'space-between', 
@@ -100,7 +100,7 @@ const ShoppingCart = () => {
     },
    }} >
     <p >Total</p>
-     <p>{total}$</p>
+     <p>{totalPrice}$</p>
   </Box>
 
 <Box></Box>

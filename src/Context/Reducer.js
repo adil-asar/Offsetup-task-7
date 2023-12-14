@@ -34,11 +34,15 @@ const Reducer = (state, action) => {
           case 'total_item_amount':
       const totalItems = state.cart_items.reduce((acc, item) => acc + item.qty, 0);
       const subtotal = state.cart_items.reduce((acc, item) => acc + item.price * item.qty, 0);
+      const totalTax =subtotal  * 0.1;
+      const totalPrice = subtotal + totalTax;
 
       return {
         ...state,
         totalItems,
         subtotal,
+        totalTax,
+        totalPrice
       };
       
     default:
