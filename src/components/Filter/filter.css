@@ -126,7 +126,19 @@ transition: transform 0.3s ease-in-out;
     background-color: rgb(108, 92, 231);
     color: #fff;
   }
+.qty_btn_css{
+  border: none;
+  width: 25px;
+  height: 25px;
+  background-color: lightgrey;
+  border-radius: 15px;
+  font-size: 15px;
+}
 
+.qty_btn_css:hover{
+  background-color: #FF9F43;
+  color:white;
+}
 
   /* responsiveness  */
   @media screen and (max-width: 1280px){

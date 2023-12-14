@@ -3,6 +3,7 @@ import Dialogbox from './Dialogbox';
 import Box from "@mui/system/Box";
 import Button from '@mui/material/Button';
 import ProductContext from '../../Context/ProductContext';
+import "./filter.css";
 
 const CardShoping = ({id,name,code,price,image,quantity}) => {
 
@@ -58,30 +59,15 @@ const CardShoping = ({id,name,code,price,image,quantity}) => {
                   
                 <button
                       onClick={handleDecrementQuantity}
-                      style={{border:'none',cursor:'pointer',
-                      borderRadius:'15px',
-                      width:'25px',height:"25px",
-                      backgroundColor:'rgb(223, 230, 233)',
-                      padding:'4px 8px',
-                      '&:hover': {
-                        backgroundColor:"#FF9F43",
-                        color:'#fff',
-                        border:'1px solid red'
-                      }
-                      }}>-</button>
+                      className='qty_btn_css'
+                      >-</button>
 
                     <p style={{color:'#000',fontWeight:'bold',margin:'0 10px'}}> {quantity} </p>
                       
                     <button 
                      onClick={handleIncrementQuantity}
-                    style={{border:'none',cursor:'pointer',
-                    backgroundColor:'rgb(223, 230, 233)',
-                    borderRadius:'15px',padding:'4px 8px',
-                    '&:hover': {
-                     
-                      color:'#fff'
-                    }
-                   }} >+</button>
+                     className='qty_btn_css'
+                     >+</button>
 
                 </Box>
             </Box>
