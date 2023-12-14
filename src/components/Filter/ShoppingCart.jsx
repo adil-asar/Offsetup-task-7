@@ -21,6 +21,19 @@ const ShoppingCart = () => {
 
   const formattedTotalTax = totalTax.toFixed(2);
 
+  const paymentMethods = [
+    { icon: <CreditCardIcon fontSize='large' sx={{ color: 'rgb(178, 190, 195)' }} />, label: 'Cash' },
+    { icon: <PaymentsIcon fontSize='large' sx={{ color: 'rgb(178, 190, 195)' }} />, label: 'Debit' },
+    { icon: <QrCodeScannerOutlinedIcon fontSize='large' sx={{ color: 'rgb(178, 190, 195)' }} />, label: 'Scan' },
+  ];
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleBoxClick = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+
+  const isCheckoutEnabled = activeIndex !== null;
+
   return (
     <Box  sx={{bgcolor:'#fff', marginTop:'20px',borderRadius:'7px', padding: "20px"}}>
   <Box sx={{display:'flex', justifyContent:'space-between',alignItems:'center', marginBottom:'20px'}}>
@@ -118,73 +131,75 @@ const ShoppingCart = () => {
  flexWrap:'wrap',
 justifyContent:'center'
 }}>
-
-<Box sx={{
-  width:'30%',
-  height:"120px",
-border:'1px solid rgb(223, 230, 233)',
-borderRadius:'7px',
-display:"flex",
-alignItems:"center",
-justifyContent:"center",
-flexDirection:"column",
-'@media screen and (max-width: 350px)': {
-  width:'45%',
-  },
-}}>
-  <CreditCardIcon fontSize='large'  sx={{color:'rgb(178, 190, 195)'}} />
-  <p style={{marginTop:"5px"}}>Cash</p>
-</Box>
-
-<Box sx={{
-  width:'30%',
-height:"120px",
-border:'1px solid rgb(223, 230, 233)',
-borderRadius:'7px',
-display:"flex",
-alignItems:"center",
-justifyContent:"center",
-flexDirection:"column",
-'@media screen and (max-width: 350px)': {
-  width:'45%',
-  },
-}}>
-  <PaymentsIcon fontSize='large'  sx={{color:'rgb(178, 190, 195)'}}/>
-  <p style={{marginTop:"5px"}}>Debit</p>
-</Box>
-
-<Box sx={{
-  width:'30%',
-  height:"120px",
-border:'1px solid rgb(223, 230, 233)',
-borderRadius:'7px',
-display:"flex",
-alignItems:"center",
-justifyContent:"center",
-flexDirection:"column",
-'@media screen and (max-width: 350px)': {
-  width:'45%',
-  },
-}}>
-  <QrCodeScannerOutlinedIcon fontSize='large' sx={{color:'rgb(178, 190, 195)'}} />
-  <p style={{marginTop:"5px"}}>Scan</p>
-</Box>
+{paymentMethods.map((method, index) => (
+        <Box
+          key={index}
+          onClick={() => handleBoxClick(index)}
+          sx={{
+            width: '30%',
+            height: '120px',
+            border: `1px solid ${index === activeIndex ? '#FF9F43' : 'rgb(223, 230, 233)'}`,
+            borderRadius: '7px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            '&:hover': {
+              border: '1px solid #FF9F43',
+            },
+            '@media screen and (max-width: 350px)': {
+              width: '45%',
+            },
+          }}
+        >
+          {method.icon}
+          <p style={{ marginTop: '5px' }}>{method.label}</p>
+        </Box>
+      ))}
 </Box>
 {/* checkout */}
 <Box sx={{marginTop:'20px'}}>
-  <Checkout/>
+  <Checkout disabled={!isCheckoutEnabled} />
 </Box>
 {/* chips */}
 <Grid container sx={{marginTop:'20px'}} spacing={2} >
 
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<PauseIcon fontSize='small' />}  label="Hold" /> </Grid>
+  <Chip sx={{
+    width:'100%',
+    fontSize:'12px',
+   '&:hover': {
+            border:"1px solid #FF9F43" 
+          },}} 
+   icon={<PauseIcon fontSize='small' />} 
+    label="Hold" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<CreateIcon fontSize='small' />}  label="Quotation" /> </Grid>
+  <Chip sx={{
+    width:'100%',
+    fontSize:'12px',
+   '&:hover': {
+           border:"1px solid #FF9F43" 
+          },}} 
+   icon={<CreateIcon fontSize='small' />} 
+    label="Quotation" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<DeleteOutlineIcon fontSize='small' />}  label="Void" /> </Grid>
+  <Chip sx={{
+    width:'100%',
+    fontSize:'12px',
+   '&:hover': {
+           border:"1px solid #FF9F43" 
+          },}} 
+   icon={<DeleteOutlineIcon fontSize='small' />} 
+    label="Void" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >
-  <Chip sx={{width:'100%',fontSize:'12px'}}  icon={<PaymentIcon fontSize='small' />}  label="Payment" /> </Grid>
+  <Chip sx={{
+    width:'100%',
+    fontSize:'12px',
+   '&:hover': {
+            border:"1px solid #FF9F43" 
+          },}} 
+   icon={<PaymentIcon fontSize='small' />} 
+    label="Payment" /> </Grid>
 <Grid item md={3} sm={6} xs={12}  >   
 <Transaction />
 </Grid>

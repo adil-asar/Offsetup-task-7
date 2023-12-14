@@ -34,7 +34,9 @@ const Transaction = () => {
     <>
       <Chip
         onClick={handleClickOpen}
-        sx={{ width: "100%", fontSize: "12px" }}
+        sx={{ width: "100%", fontSize: "12px", '&:hover': {
+         border:"1px solid #FF9F43"
+        }, }}
         icon={<CreditScoreIcon fontSize="small" />}
         label="Transaction"
       />

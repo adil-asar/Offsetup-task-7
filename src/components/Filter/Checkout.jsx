@@ -8,7 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import ProductContext from '../../Context/ProductContext';
 import Typography from '@mui/material/Typography';
 
-export default function Checkout() {
+export default function Checkout({ disabled }) {
 
     const {totalPrice,removeAllItems} = useContext(ProductContext);
   const [open, setOpen] =useState(false);
@@ -25,6 +25,7 @@ export default function Checkout() {
   return (
     <React.Fragment>
       <Button
+        disabled={disabled}
         onClick={handleClickOpen}
         sx={{
           width: "100%",
