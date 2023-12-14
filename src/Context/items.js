@@ -18,6 +18,12 @@ import shoe1 from "../assets/product60.jpg";
 import car1 from "../assets/passo.jpg";
 import car2 from "../assets/swift.jpg";
 import car3 from "../assets/ribbon.jpg";
+import  dell from  "../assets/dell.jpg";
+import  hp from  "../assets/hp.jpg";
+import  thinkpad from  "../assets/thinkpad.jpg";
+import iphone  from  "../assets/11.jpg";
+import  oppo from  "../assets/oppo.jpg";
+import  redmi from  "../assets/redmi.jpg";
 
 const items = [
   { id: 1, price:15, qty:1, name: "Banana", src: banana, category: "Fruits" },
@@ -40,6 +46,12 @@ const items = [
   { id: 18, price:15, qty:1, name: "Passo", src:car1 , category: "Cars" },
   { id: 19, price:15, qty:1, name: "Swift", src:car2 , category: "Cars" },
   { id: 20, price:15, qty:1, name: "Ribbon", src:car3 , category: "Cars" },
+  { id: 21, price:15, qty:1, name: "Dell ", src:dell , category: "Laptop" },
+  { id: 22, price:15, qty:1, name: "Hp 320", src:hp , category: "Laptop" },
+  { id: 23, price:15, qty:1, name: "Thinkpad", src:thinkpad , category: "Laptop" },
+  { id: 24, price:15, qty:1, name: "Ipone 11 ", src:iphone , category: "CellPhones" },
+  { id: 25, price:15, qty:1, name: "Oppo 12", src:oppo , category: "CellPhones" },
+  { id: 26, price:15, qty:1, name: "Redmi 9", src:redmi , category: "CellPhones" },
 ];
 
 export default items;
