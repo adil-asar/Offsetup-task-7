@@ -55,6 +55,12 @@ const Reducer = (state, action) => {
         totalTax,
         totalPrice
       };
+
+      case 'SET_CART_ITEMS':
+  return {
+    ...state,
+    cart_items: action.payload,
+  };
       
     default:
       return state;

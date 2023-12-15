@@ -47,8 +47,8 @@ const ShoppingCart = () => {
   
     }}>Total Items : {totalItems}</p>
 
-    <Button sx={{fontSize:'13px',
-     fontWeight:"bold",
+    <Button sx={{
+      fontSize:'13px',
     letterSpacing:'1px',
     cursor:'pointer',
     color:'gray',

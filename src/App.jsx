@@ -7,11 +7,19 @@ import { initial_state } from './Context/InitialState.js';
 import Reducer from './Context/Reducer.js';
 
 const App = () => {
-  const [state, dispatch] = useReducer(Reducer,initial_state);
+  // const [state, dispatch] = useReducer(Reducer,initial_state);
+  const storedCartItems = JSON.parse(localStorage.getItem('cart_items')) || [];
+  const [state, dispatch] = useReducer(Reducer, { ...initial_state, cart_items: storedCartItems });
 
   const addToCart = (item) => {
     dispatch({ type: 'ADD_TO_CART', payload: item });
   };
+
+  useEffect(() => {
+    localStorage.setItem('cart_items', JSON.stringify(state.cart_items));
+  }, [state.cart_items]);
+
+ 
 
   useEffect(() => {
     dispatch({type:'total_item_amount'})

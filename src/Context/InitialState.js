@@ -5,7 +5,7 @@ import banana from "../assets/product35.jpg";
 
 const shoppingdata = [ 
   { id:1,name:'Banana',qty:1, price:'24',code:'Fruits',image:banana},
-  { id:2,name:'Sashimi',qty:1, price:'22',code:'Snackes',image:snaks1},
+  { id:2,name:'Sashimi',qty:1, price:'21',code:'Snackes',image:snaks1},
 ];
 
 

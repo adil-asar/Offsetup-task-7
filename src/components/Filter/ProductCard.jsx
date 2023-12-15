@@ -23,8 +23,8 @@ const ProductCard = ({name,source,categ,price,quantity,itemid}) => {
 <div className='image_container'>
 <img src={source} alt="" />
 </div>
-{isActive && <CheckBoxIcon className='icon_css' fontSize='small' />}
 
+{isActive && <CheckBoxIcon className='icon_css' fontSize='small' />}
       <p style={{fontSize:"15px",marginTop:'15px',letterSpacing:'1px',marginBottom:'10px',}}>{categ}</p>
       <strong style={{letterSpacing:'2px',}}>{name}</strong>
       <p style={{color:'red',marginBottom:'15px',marginTop:'5px'}}>{price} $</p>
