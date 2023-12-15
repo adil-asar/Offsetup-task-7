@@ -10,7 +10,7 @@ import ProductContext from '../../Context/ProductContext';
 
 const Dialogsub = ({setOpen,id}) => {
     const [dialog, setdialog] = React.useState(false);
-    const { removeItem } = useContext(ProductContext);
+    const { removeItem , setunSelect } = useContext(ProductContext);
 
     const handleClickOpen = () => {
       setdialog(true);
@@ -19,7 +19,7 @@ const Dialogsub = ({setOpen,id}) => {
 
     const handleRemoveSingleItem = () => {
       removeItem(id);
-     
+     setunSelect(false);
     };
   
     const handleClose = () => {

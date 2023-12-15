@@ -1,4 +1,4 @@
-import React, { useReducer ,useEffect } from 'react'
+import React, { useReducer ,useEffect, useState } from 'react'
 import Header from './components/Header/Header'
 import Layout from './components/Filter/Layout';
 import ProductContext from './Context/ProductContext.js';
@@ -11,6 +11,9 @@ const App = () => {
   const storedCartItems = JSON.parse(localStorage.getItem('cart_items')) || [];
   const [state, dispatch] = useReducer(Reducer, { ...initial_state, cart_items: storedCartItems });
 
+
+ 
+ 
   const addToCart = (item) => {
     dispatch({ type: 'ADD_TO_CART', payload: item });
   };
@@ -44,7 +47,7 @@ const App = () => {
   return (
     <>
        <ProductContext.Provider
-       value={{...state , items , addToCart,removeAllItems,incrementQuantity,decrementQuantity ,removeItem}}
+       value={{...state , items , addToCart,removeAllItems,incrementQuantity,decrementQuantity ,removeItem,}}
        >
    <Header/>
    <Layout/>
