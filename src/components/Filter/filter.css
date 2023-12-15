@@ -168,14 +168,8 @@ transition: transform 0.3s ease-in-out;
     .tabs_items{ justify-content: center; }
     .tab_card{     width: 150px; height: 150px;}
       .img-css {     width: 100px;  height: 100px;}
-      .add_to_cart{
-        margin-bottom: 20px;
-        width: 40px;
-        height: 40px;
       
-      }
-      
-
+    }
 @media screen and (max-width: 550px) {
     .product_card{   width: 80%;  }
     .product_card img{   height: 260px; }
