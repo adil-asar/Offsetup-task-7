@@ -97,7 +97,7 @@ overflow: hidden;
 transition: transform 0.3s ease-in-out;
   }
   .product_card:hover img {
-    transform: scale(1.1); /* Adjust the scale factor for zoom level */
+    transform: scale(1.2); /* Adjust the scale factor for zoom level */
 }
 
 .image_container{

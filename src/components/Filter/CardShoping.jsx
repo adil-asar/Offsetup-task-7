@@ -89,7 +89,7 @@ const CardShoping = ({id,name,code,price,image,quantity}) => {
               },
             
             },
-            }}>{price}</p>
+            }}>{price} $</p>
           <Dialogbox itemid={id}/>
         </Box>
     </Box>
