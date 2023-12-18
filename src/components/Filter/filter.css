@@ -15,7 +15,7 @@
 .tabs{
     display: flex;
     gap: 22px;
-    padding: 2 5px;
+    padding: 2px 5px;
     scroll-behavior: smooth;
     overflow-x: hidden;
     width: 100%;
