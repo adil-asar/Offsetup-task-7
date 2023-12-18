@@ -158,7 +158,7 @@ justifyContent:'center'
             '&:hover': {
               border: '1px solid #FF9F43',
             },
-            '@media screen and (max-width: 350px)': {
+            '@media screen and (max-width: 400px)': {
               width: '45%',
             },
           }}

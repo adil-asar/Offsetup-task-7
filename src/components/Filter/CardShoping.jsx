@@ -30,8 +30,8 @@ const CardShoping = ({id,name,code,price,image,quantity}) => {
         <Box 
         sx={{display:'flex',flexWrap:'wrap',textAlign:'center',
         justifyContent:'start',width:'50%',alignItems:"center",
-        '@media screen and (maxWidth: 400px)': {
-          justifyContent:'center',
+        '@media screen and (max-width: 450px)': {
+          textAlign:'start',
         },
         }}>
             <img src={image}
@@ -39,14 +39,20 @@ const CardShoping = ({id,name,code,price,image,quantity}) => {
               width:'40%',
              borderRadius:'10px',
              marginRight:'15px',
-             
+             '@media screen and (max-width: 450px)': {
+              marginBottom:'150px',
+             }
             }} 
               alt="" />
             <Box >
-                <p style={{background:'',marginBottom:'10px',marginTop:'0px'}}>{name}</p>
+                <p style={{marginBottom:'10px', marginTop:"10px",
+              '@media screen and (max-width: 450px)': {
+           marginTop:"15px",
+            
+             }}}>{name}</p>
 
                 <p style={{background:'#FF9F43',
-                marginBottom:'10px',
+                marginBottom:'18px',
                 marginTop:'10px',
                 padding:'2px 5px',
                 borderRadius:'5px',
