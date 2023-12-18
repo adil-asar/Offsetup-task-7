@@ -13,7 +13,7 @@ import ShoppingCart from "./ShoppingCart";
 const Addcart = () => {
   return (
     <>
-      <Grid container spacing={1}>
+      <Grid container >
         <Grid
           item
           xs={12}
@@ -26,13 +26,13 @@ const Addcart = () => {
             flexWrap: "wrap",
           }}
         >
-          <Box>
+          <Box >
             <h2>Order List</h2>
             <p>Transaction id : #65565</p>
           </Box>
           
         </Grid>
-        <Grid item xs={12} sx={{ padding: "20px" }}>
+        <Grid item xs={12} sx={{ padding: "20px", }}>
           <Box sx={{ bgcolor: "#fff", borderRadius: "7px", padding: "20px",textAlign:'right' }}>
             {/* select */}
             <FormSelect
