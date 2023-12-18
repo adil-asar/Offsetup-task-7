@@ -50,7 +50,7 @@
   /* scroll btn */
 
   .scroll_button {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: right;
   }
 
@@ -160,21 +160,23 @@ transition: transform 0.3s ease-in-out;
     .tabs_items{ justify-content: space-between; }
     .tab_card{     width: 150px; height: 150px;}
       .img-css {     width: 100px;  height: 100px;}
-      
+      .scroll_button{ margin-bottom: 15px;} 
   }
   @media screen and (max-width: 1000px) {
     .product_card{   width: 47.5%;  }
     .product_card img{   height: 250px; }
     .tabs_items{ justify-content: center; }
-    .tab_card{     width: 150px; height: 150px;}
+    .tab_card{     width: 135px; height: 135px;}
       .img-css {     width: 100px;  height: 100px;}
+      .scroll_button{ margin-bottom: 20px;}
       
     }
 @media screen and (max-width: 550px) {
     .product_card{   width: 80%;  }
     .product_card img{   height: 260px; }
-    .tab_card{     width: 5; height: 180px;}
-      .img-css {     width: 140px;  height: 140px;}    
+    .tab_card{     width: 125px; height: 125px;}
+      .img-css {     width: 80px;  height: 80px;}   
+      .scroll_button{ margin-bottom: 20px;} 
 }
 
 @media screen and (max-width: 350px) {

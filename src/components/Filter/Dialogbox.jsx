@@ -58,7 +58,7 @@ const Dialogbox = ({itemid}) => {
       fontSize:'28px',
       color:'rgb(83, 92, 104)',
       fontFamily:'Titillium Web, sans-serif',
-      '@media screen and (maxWidth: 425px)': {
+      '@media screen and (max-Width: 425px)': {
         fontSize:"24px",
         },
       }}>Are you sure?</Typography  >
@@ -73,7 +73,7 @@ const Dialogbox = ({itemid}) => {
         fontFamily:'Titillium Web, sans-serif',
         color:'rgb(83, 92, 104)',
         fontSize:'20px',
-        '@media screen and (maxWidth: 425px)': {
+        '@media screen and (max-width: 425px)': {
           fontSize:'15px',
           },
    }}>
@@ -97,7 +97,7 @@ const Dialogbox = ({itemid}) => {
         '&:hover': {
           backgroundColor: 'rgb(235, 77, 75)', 
         },
-        '@media screen and (maxWidth: 425px)': {
+        '@media screen and (max-width: 425px)': {
           fontSize:"15px",
           padding:'4px 8px',
           },
